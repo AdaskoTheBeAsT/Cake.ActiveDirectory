@@ -1,5 +1,4 @@
 ﻿using Cake.ActiveDirectory.Users;
-using Landpy.ActiveDirectory.Core;
 
 namespace Cake.ActiveDirectory.Tests.Fixture {
     internal sealed class UserUpdateFixture {

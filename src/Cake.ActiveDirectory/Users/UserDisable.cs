@@ -1,7 +1,4 @@
-﻿using Landpy.ActiveDirectory.Core;
-using System;
-
-namespace Cake.ActiveDirectory.Users {
+﻿namespace Cake.ActiveDirectory.Users {
     /// <summary>
     /// The User Disable class for disabling Active Directory Users.
     /// </summary>

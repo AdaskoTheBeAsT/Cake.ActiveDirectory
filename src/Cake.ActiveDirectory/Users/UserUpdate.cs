@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Linq;
-using Landpy.ActiveDirectory.Core;
-using Landpy.ActiveDirectory.Core.Filter.Expression;
-using Landpy.ActiveDirectory.Entity.Object;
 
 namespace Cake.ActiveDirectory.Users {
     /// <summary>

@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using Landpy.ActiveDirectory.Core;
-using Landpy.ActiveDirectory.Core.Filter.Expression;
-using Landpy.ActiveDirectory.Entity.Object;
 
 namespace Cake.ActiveDirectory.Users {
     /// <summary>
     /// The User Find class for searching for Active Directory Users.
     /// </summary>
-    public sealed class UserFind : ActiveDirectoryBase<UserSettings> {
+    public sealed class UserFind : ActiveDirectoryBase<UserSettings>
+    {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserFind"/> class.
         /// </summary>

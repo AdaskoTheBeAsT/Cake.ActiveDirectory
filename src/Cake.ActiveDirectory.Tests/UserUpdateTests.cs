@@ -1,8 +1,7 @@
 ﻿using System;
 using Cake.ActiveDirectory.Tests.Fixture;
-using Landpy.ActiveDirectory.Core;
 using NSubstitute;
-using Should;
+using Shouldly;
 using Xunit;
 
 namespace Cake.ActiveDirectory.Tests {
@@ -19,7 +18,7 @@ namespace Cake.ActiveDirectory.Tests {
                 var result = Record.Exception(() => fixture.UpdateUser());
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("settings");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("settings");
             }
             [Fact]
             public void Should_Throw_If_AttributeName_Is_Null() {
@@ -32,7 +31,7 @@ namespace Cake.ActiveDirectory.Tests {
                 var result = Record.Exception(() => fixture.UpdateUser());
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("attributeName");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("attributeName");
             }
             [Fact]
             public void Should_Throw_If_AttributeValue_Is_Null() {
@@ -45,7 +44,7 @@ namespace Cake.ActiveDirectory.Tests {
                 var result = Record.Exception(() => fixture.UpdateUser());
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("attributeValue");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("attributeValue");
             }
         }
 
@@ -61,7 +60,7 @@ namespace Cake.ActiveDirectory.Tests {
                 var result = Record.Exception(() => fixture.UpdateOrganizationUnit());
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyName");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyName");
             }
             [Fact]
             public void Should_Throw_If_PropertyValue_Is_Null() {
@@ -74,7 +73,7 @@ namespace Cake.ActiveDirectory.Tests {
                 var result = Record.Exception(() => fixture.UpdateOrganizationUnit());
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyValue");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyValue");
             }
 
             [Fact]
@@ -88,7 +87,7 @@ namespace Cake.ActiveDirectory.Tests {
                 var result = Record.Exception(() => fixture.UpdateOrganizationUnit());
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("organizationalUnit");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("organizationalUnit");
             }
         }
     }

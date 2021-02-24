@@ -1,8 +1,6 @@
 ﻿using NSubstitute;
 using System;
 using Cake.ActiveDirectory.Tests.Fixture;
-using Landpy.ActiveDirectory.Core;
-using Should;
 using Xunit;
 
 namespace Cake.ActiveDirectory.Tests {
@@ -19,7 +17,7 @@ namespace Cake.ActiveDirectory.Tests {
                 var result = Record.Exception(() => fixture.FindUserPrincipalNameByProperty());
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyName");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyName");
             }
 
             [Fact]
@@ -33,7 +31,7 @@ namespace Cake.ActiveDirectory.Tests {
                 var result = Record.Exception(() => fixture.FindUserPrincipalNameByProperty());
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyValue");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyValue");
             }
         }
 
@@ -49,7 +47,7 @@ namespace Cake.ActiveDirectory.Tests {
                 var result = Record.Exception(() => fixture.FindDistinguishedNameByProperty());
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyName");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyName");
             }
 
             [Fact]
@@ -63,7 +61,7 @@ namespace Cake.ActiveDirectory.Tests {
                 var result = Record.Exception(() => fixture.FindDistinguishedNameByProperty());
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyValue");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyValue");
             }
         }
 
@@ -79,7 +77,7 @@ namespace Cake.ActiveDirectory.Tests {
                 var result = Record.Exception(() => fixture.FindAttributeValueByProperty());
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyName");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyName");
             }
 
             [Fact]
@@ -93,7 +91,7 @@ namespace Cake.ActiveDirectory.Tests {
                 var result = Record.Exception(() => fixture.FindAttributeValueByProperty());
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyValue");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyValue");
             }
 
             [Fact]
@@ -107,7 +105,7 @@ namespace Cake.ActiveDirectory.Tests {
                 var result = Record.Exception(() => fixture.FindAttributeValueByProperty());
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("attributeName");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("attributeName");
             }
         }
 
@@ -123,7 +121,7 @@ namespace Cake.ActiveDirectory.Tests {
                 var result = Record.Exception(() => fixture.FindByOrganizationUnit());
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("organizationalUnit");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("organizationalUnit");
             }
         }
     }

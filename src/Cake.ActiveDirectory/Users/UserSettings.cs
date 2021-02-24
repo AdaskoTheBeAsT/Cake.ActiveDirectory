@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Cake.ActiveDirectory.Users {
+﻿namespace Cake.ActiveDirectory.Users {
     /// <summary>
     /// Contains settings used by <see cref="UserCreate"/>.
     /// </summary>

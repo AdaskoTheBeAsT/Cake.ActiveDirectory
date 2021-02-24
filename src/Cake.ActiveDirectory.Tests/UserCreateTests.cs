@@ -1,8 +1,7 @@
 ﻿using System;
 using Cake.ActiveDirectory.Tests.Fixture;
-using Landpy.ActiveDirectory.Core;
 using NSubstitute;
-using Should;
+using Shouldly;
 using Xunit;
 
 namespace Cake.ActiveDirectory.Tests {
@@ -18,7 +17,7 @@ namespace Cake.ActiveDirectory.Tests {
             var result = Record.Exception(() => fixture.CreateUser());
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("settings");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("settings");
         }
         [Fact]
         public void Should_Throw_If_SAMAccountName_Is_Null() {
@@ -31,7 +30,7 @@ namespace Cake.ActiveDirectory.Tests {
             var result = Record.Exception(() => fixture.CreateUser());
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("samAccountName");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("samAccountName");
         }
         [Fact]
         public void Should_Throw_If_OUDistinguishedName_Is_Null() {
@@ -44,7 +43,7 @@ namespace Cake.ActiveDirectory.Tests {
             var result = Record.Exception(() => fixture.CreateUser());
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("ouDistinguishedName");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("ouDistinguishedName");
         }
 
         //public void Should_Create_User() {

@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using Cake.ActiveDirectory.Users;
 using Cake.Core;
 using Cake.Core.Annotations;
-using Landpy.ActiveDirectory.Core;
-using Landpy.ActiveDirectory.Entity.Object;
 
 namespace Cake.ActiveDirectory {
     /// <summary>

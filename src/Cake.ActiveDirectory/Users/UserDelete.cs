@@ -1,5 +1,4 @@
 ﻿using System;
-using Landpy.ActiveDirectory.Core;
 
 namespace Cake.ActiveDirectory.Users {
     /// <summary>

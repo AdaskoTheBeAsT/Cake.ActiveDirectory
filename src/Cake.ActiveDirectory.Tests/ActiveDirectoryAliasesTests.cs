@@ -2,7 +2,7 @@
 using Cake.ActiveDirectory.Users;
 using Cake.Core;
 using NSubstitute;
-using Should;
+using Shouldly;
 using Xunit;
 
 namespace Cake.ActiveDirectory.Tests {
@@ -19,7 +19,7 @@ namespace Cake.ActiveDirectory.Tests {
                 null, samAccountName, ouDistinguishedName, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("context");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("context");
         }
 
         [Fact]
@@ -34,7 +34,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, null, ouDistinguishedName, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("samAccountName");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("samAccountName");
         }
 
         [Fact]
@@ -49,7 +49,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, samAccountName, null, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("ouDistinguishedName");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("ouDistinguishedName");
         }
     }
 
@@ -67,7 +67,7 @@ namespace Cake.ActiveDirectory.Tests {
                 null, attributeName, attributeValue, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("context");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("context");
         }
 
         [Fact]
@@ -82,7 +82,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, null, attributeValue, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("attributeName");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("attributeName");
         }
 
         [Fact]
@@ -97,7 +97,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, attributeName, null, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("attributeValue");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("attributeValue");
         }
 
         [Fact]
@@ -112,7 +112,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, attributeName, attributeValue, null));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("settings");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("settings");
         }
     }
 
@@ -129,7 +129,7 @@ namespace Cake.ActiveDirectory.Tests {
                 null, propertyName, propertyValue, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("context");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("context");
         }
 
         [Fact]
@@ -144,7 +144,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, null, propertyValue, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyName");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyName");
         }
 
         [Fact]
@@ -159,7 +159,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, propertyName, null, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyValue");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyValue");
         }
 
         [Fact]
@@ -174,7 +174,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, propertyName, propertyValue, null));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("settings");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("settings");
         }
     }
 
@@ -191,7 +191,7 @@ namespace Cake.ActiveDirectory.Tests {
                 null, propertyName, propertyValue, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("context");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("context");
         }
 
         [Fact]
@@ -206,7 +206,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, null, propertyValue, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyName");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyName");
         }
 
         [Fact]
@@ -221,7 +221,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, propertyName, null, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyValue");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyValue");
         }
 
         [Fact]
@@ -236,7 +236,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, propertyName, propertyValue, null));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("settings");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("settings");
         }
     }
 
@@ -254,7 +254,7 @@ namespace Cake.ActiveDirectory.Tests {
                 null, propertyName, propertyValue, attributeName, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("context");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("context");
         }
 
         [Fact]
@@ -270,7 +270,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, null, propertyValue, attributeName, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyName");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyName");
         }
 
         [Fact]
@@ -286,7 +286,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, propertyName, null, attributeName, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyValue");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyValue");
         }
 
         [Fact]
@@ -302,7 +302,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, propertyName, propertyValue, null, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("attributeName");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("attributeName");
         }
 
         [Fact]
@@ -317,7 +317,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, propertyName, propertyValue, null));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("settings");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("settings");
         }
     }
 
@@ -333,7 +333,7 @@ namespace Cake.ActiveDirectory.Tests {
                 null, organizationalUnit, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("context");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("context");
         }
 
         [Fact]
@@ -347,7 +347,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, null, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("organizationalUnit");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("organizationalUnit");
         }
 
         [Fact]
@@ -361,7 +361,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, organizationalUnit, null));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("settings");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("settings");
         }
     }
 
@@ -378,7 +378,7 @@ namespace Cake.ActiveDirectory.Tests {
                 null, propertyName, propertyvalue, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("context");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("context");
         }
 
         [Fact]
@@ -393,7 +393,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, null, propertyValue, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyName");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyName");
         }
 
         [Fact]
@@ -408,7 +408,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, propertyName, null, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyValue");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyValue");
         }
 
         public sealed class UpdateOrganizationUnitAliasesTests {
@@ -425,7 +425,7 @@ namespace Cake.ActiveDirectory.Tests {
                     null, propertyName, propertyValue, settings));
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("context");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("context");
             }
 
             [Fact]
@@ -441,7 +441,7 @@ namespace Cake.ActiveDirectory.Tests {
                     context, null, propertyValue, ou, settings));
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyName");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyName");
             }
 
             [Fact]
@@ -457,7 +457,7 @@ namespace Cake.ActiveDirectory.Tests {
                     context, propertyName, null, ou, settings));
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyValue");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyValue");
             }
 
             [Fact]
@@ -473,7 +473,7 @@ namespace Cake.ActiveDirectory.Tests {
                     context, propertyName, propertyValue, null, settings));
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("organizationalUnit");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("organizationalUnit");
             }
 
             [Fact]
@@ -489,7 +489,7 @@ namespace Cake.ActiveDirectory.Tests {
                     context, propertyName, propertyValue, ou, null));
 
                 // Then
-                result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("settings");
+                result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("settings");
             }
         }
     }
@@ -506,7 +506,7 @@ namespace Cake.ActiveDirectory.Tests {
                 null, userPrincipalName, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("context");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("context");
         }
 
         [Fact]
@@ -520,7 +520,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, null, settings));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("userPrincipalName");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("userPrincipalName");
         }
 
         [Fact]
@@ -534,7 +534,7 @@ namespace Cake.ActiveDirectory.Tests {
                 context, userPrincipalName, null));
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("settings");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("settings");
         }
     }
 }

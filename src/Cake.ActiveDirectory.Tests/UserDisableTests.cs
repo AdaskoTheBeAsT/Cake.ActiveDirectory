@@ -1,7 +1,5 @@
 ﻿using Cake.ActiveDirectory.Tests.Fixture;
-using Landpy.ActiveDirectory.Core;
 using NSubstitute;
-using Should;
 using System;
 using Xunit;
 
@@ -18,7 +16,7 @@ namespace Cake.ActiveDirectory.Tests {
             var result = Record.Exception(() => fixture.DisableUser());
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyName");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyName");
         }
         [Fact]
         public void Should_Throw_If_AttributeValue_Is_Null() {
@@ -31,7 +29,7 @@ namespace Cake.ActiveDirectory.Tests {
             var result = Record.Exception(() => fixture.DisableUser());
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("propertyValue");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("propertyValue");
         }
     }
 }

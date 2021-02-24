@@ -14,8 +14,13 @@
         public string Password { get; set; }
 
         /// <summary>
-        /// Active Directory domain name to operate on.
+        /// Ldap host.
         /// </summary>
-        public string DomainName { get; set; }
+        public string LdapHost { get; set; }
+
+        /// <summary>
+        /// Ldap port.
+        /// </summary>
+        public int LdapPort { get; set; }
     }
 }

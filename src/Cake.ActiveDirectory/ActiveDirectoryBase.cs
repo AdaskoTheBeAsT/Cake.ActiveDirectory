@@ -1,25 +1,23 @@
 ﻿using Cake.ActiveDirectory.Users;
-using Landpy.ActiveDirectory.Core;
-using Landpy.ActiveDirectory.Core.Filter.Expression;
-using Landpy.ActiveDirectory.Entity.Object;
 using System;
-using System.Collections;
-using System.Linq;
+using Novell.Directory.Ldap;
 
 namespace Cake.ActiveDirectory {
     /// <summary>
     /// The Active Directory command base class.
     /// </summary>
-    public abstract class ActiveDirectoryBase<TSettings> where TSettings : ActiveDirectorySettings  {
+    public abstract class ActiveDirectoryBase<TSettings>
+        where TSettings : ActiveDirectorySettings
+    {
 
-        internal readonly IADOperator _adOperator;
+        internal readonly TSettings _settings;
 
         /// <summary>
         /// Intializes a new instance of the <see cref="ActiveDirectoryBase{TSettings}"/> class;
         /// </summary>
-        /// <param name="adOperator">The Active Directory</param>
-        protected ActiveDirectoryBase(IADOperator adOperator) {
-            _adOperator = adOperator;
+        /// <param name="settings">The Active Directory settings.</param>
+        protected ActiveDirectoryBase(TSettings settings) {
+            _settings = settings;
         }
         
         /// <summary>
@@ -81,6 +79,12 @@ namespace Cake.ActiveDirectory {
             if (string.IsNullOrWhiteSpace(propertyValue)) {
                 throw new ArgumentNullException(nameof(propertyValue));
             }
+
+            var ldapConn = new LdapConnection();
+            ldapConn.Connect(_settings.LdapHost, _settings.LdapPort);
+            ldapConn.Bind(_settings.LoginName, _settings.Password);
+
+
             return UserObject.FindAll(_adOperator, new Is(propertyName, propertyValue)).FirstOrDefault();
         }
     }

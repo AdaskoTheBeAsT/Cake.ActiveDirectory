@@ -1,8 +1,6 @@
-﻿using Landpy.ActiveDirectory.Core;
-using NSubstitute;
+﻿using NSubstitute;
 using System;
 using Cake.ActiveDirectory.Tests.Fixture;
-using Should;
 using Xunit;
 
 namespace Cake.ActiveDirectory.Tests {
@@ -18,7 +16,7 @@ namespace Cake.ActiveDirectory.Tests {
             var result = Record.Exception(() => fixture.DeleteUser());
 
             // Then
-            result.ShouldBeType<ArgumentNullException>().ParamName.ShouldEqual("userPrincipalName");
+            result.ShouldBeOfType<ArgumentNullException>().ParamName.ShouldBe("userPrincipalName");
         }
     }
 }

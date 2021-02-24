@@ -1,6 +1,4 @@
 ﻿using Cake.ActiveDirectory.Users;
-using Landpy.ActiveDirectory.Core;
-using Landpy.ActiveDirectory.Entity.Attribute.Name;
 
 namespace Cake.ActiveDirectory.Tests.Fixture {
     internal sealed class UserFindFixture {
